@@ -30,6 +30,7 @@ const Signin = (props) => {
             type="username"
             value={formValues.username}
             required
+            autoComplete="off"
           />
           <label>Password:</label>
           <input
@@ -38,6 +39,7 @@ const Signin = (props) => {
             type="password"
             value={formValues.password}
             required
+            autoComplete="off"
           />
           <button disabled={!formValues.username || !formValues.password}>
             Sign In
