@@ -5,17 +5,16 @@ const Nav = ({authenticated, user, handleLogOut}) => {
     authenticatedOptions = (
         <nav>
             <h3>Welcome (user)</h3>
-            <Link>Home</Link>
+            <Link>Feed</Link>
             <Link onClick={handleLogOut}>Sign Out</Link>
         </nav>
     )
 }
 const publicOptions = (
 <nav>
-    <h2>Welcome guest!</h2>
-    <Link>Home</Link>
-    <Link>Register</Link>
-    <Link>Sign In</Link>
+    <Link to='/'>Home</Link>
+    <Link to='/register'>Register</Link>
+    <Link to='/signin'>Sign In</Link>
 </nav>
 )
 
@@ -23,7 +22,7 @@ const publicOptions = (
 return (<div>
         <header>
   <Link to="/">
-    <h3>HOME</h3>
+    <h3>XD</h3>
   </Link>
   {authenticated && user ? authenticatedOptions : publicOptions}
 </header>

@@ -1,5 +1,9 @@
 const Signin = () => {
-  return <div></div>
+  return (
+    <div>
+      <h2>Sign in to get full access!</h2>
+    </div>
+  )
 }
 
 export default Signin

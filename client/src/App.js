@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Nav from './components/Nav'
 import Home from './pages/Home'
+import Signin from './pages/Signin'
+import Register from './pages/Register'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -38,6 +40,16 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route
+            path="/signin"
+            element={
+              <Signin
+                setUser={setUser}
+                toggleAuthenticated={toggleAuthenticated}
+              />
+            }
+          ></Route>
+          <Route path="/register" element={<Register />} />
         </Routes>
       </main>
     </div>
