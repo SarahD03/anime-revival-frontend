@@ -30,8 +30,11 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Test</h1>
-      <Nav />
+      <Nav
+        authenticated={authenticated}
+        user={user}
+        handleLogOut={handleLogOut}
+      />
       <main>
         <Routes>
           <Route path="/" element={<Home />}></Route>
