@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { BASE_URL } from '../services/api'
+import { useNavigate } from 'react-router-dom'
 
 const Feed = ({ user, authenticated }) => {
   const [posts, setPosts] = useState([])
@@ -13,6 +14,8 @@ const Feed = ({ user, authenticated }) => {
     }
     handlePosts()
   }, [])
+
+  let navigate = useNavigate()
 
   return user && authenticated ? (
     <div>
@@ -29,7 +32,7 @@ const Feed = ({ user, authenticated }) => {
   ) : (
     <div>
       <h3>Please sign in to continue...</h3>
-      <button>Signin</button>
+      <button onClick={() => navigate('/signin')}>Signin</button>
     </div>
   )
 }
