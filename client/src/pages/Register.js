@@ -35,8 +35,8 @@ const Register = () => {
     <div>
       <h1>Create Your Account!</h1>
       <div>
-        <form>
-          <label>Username:</label>
+        <form onSubmit={handleSubmit}>
+          <label>UserName:</label>
           <input
             onChange={handleChange}
             name="userName"

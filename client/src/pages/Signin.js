@@ -12,7 +12,7 @@ const Signin = (props) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const payload = await SignInUser(formValues)
-    setFormValues({ username: '', password: '' })
+    setFormValues({ userName: '', password: '' })
     props.setUser(payload)
     props.toggleAuthenticated(true)
     // navigate('/feed')
@@ -26,9 +26,9 @@ const Signin = (props) => {
           <label>UserName:</label>
           <input
             onChange={handleChange}
-            name="username"
-            type="username"
-            value={formValues.username}
+            name="userName"
+            type="text"
+            value={formValues.userName}
             required
             autoComplete="off"
           />
@@ -41,7 +41,7 @@ const Signin = (props) => {
             required
             autoComplete="off"
           />
-          <button disabled={!formValues.username || !formValues.password}>
+          <button disabled={!formValues.userName || !formValues.password}>
             Sign In
           </button>
         </form>
