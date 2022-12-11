@@ -5,15 +5,25 @@ import logo from '/Users/sarah03/ga_seir/projects/anime-revival-frontend2/client
 
 const Profile = ({ user, authenticated }) => {
   const [profile, setProfile] = useState([])
+  const [posts, setPost] = useState([])
   let { id } = useParams()
 
   useEffect(() => {
     const getProfile = async () => {
       let profileCard = await Client.get(`/users/${id}`)
       setProfile(profileCard.data)
-      console.log('profile data:', profileCard.data.posts)
+      console.log('profile data:', profileCard.data)
     }
     getProfile()
+  }, [])
+  //added another useeffect because it wasnt working for first one
+  useEffect(() => {
+    const getPosts = async () => {
+      let profileCard = await Client.get(`/users/${id}`)
+      setPost(profileCard.data.posts)
+      console.log('posts data:', profileCard.data.posts)
+    }
+    getPosts()
   }, [])
 
   // if profile is empty string or empty this will automatically load a default avatar
@@ -31,10 +41,10 @@ const Profile = ({ user, authenticated }) => {
       </h1>
       <h1>{profile.userName}</h1>
       <h3>
-        My Posts:{' '}
-        {profile.posts.map((post) => (
+        My Posts:
+        {posts.map((post) => (
           <div className="profile-posts">
-            <h2>{post.description}</h2>
+            <h2 key={id}>{post.description}</h2>
             <img src={post.image} />
             <h4>Date: {post.createdAt}</h4>
           </div>

@@ -16,6 +16,7 @@ const Signin = (props) => {
     props.setUser(payload)
     props.toggleAuthenticated(true)
     navigate(`/profile/${payload.id}`)
+    console.log(payload.id)
   }
 
   return (
