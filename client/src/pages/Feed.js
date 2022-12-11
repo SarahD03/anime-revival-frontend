@@ -23,6 +23,7 @@ const Feed = ({ user, authenticated }) => {
       <div>
         {posts.map((item) => (
           <div className="post-card">
+            <h3>Posted by: {item.owner.userName}</h3>
             <img src={item.image} />
             <h3>{item.description}</h3>
           </div>
