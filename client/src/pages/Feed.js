@@ -31,7 +31,7 @@ const Feed = ({ user, authenticated }) => {
       </div>
     </div>
   ) : (
-    <div>
+    <div className="protected">
       <h3>Please sign in to continue...</h3>
       <button onClick={() => navigate('/signin')}>Signin</button>
     </div>
