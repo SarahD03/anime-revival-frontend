@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Signin from './pages/Signin'
 import Register from './pages/Register'
 import Profile from './pages/Profile'
+import Feed from './pages/Feed.js'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -54,6 +55,10 @@ function App() {
           <Route
             path="/profile/:id"
             element={<Profile user={user} authenticated={authenticated} />}
+          />
+          <Route
+            path="/feed"
+            element={<Feed user={user} authenticated={authenticated} />}
           />
         </Routes>
       </main>
