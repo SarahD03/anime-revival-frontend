@@ -11,7 +11,7 @@ const Profile = ({ user, authenticated }) => {
     const getProfile = async () => {
       let profileCard = await Client.get(`/users/${id}`)
       setProfile(profileCard.data)
-      console.log('profile data:', profileCard.data)
+      console.log('profile data:', profileCard.data.posts)
     }
     getProfile()
   }, [])
@@ -30,7 +30,16 @@ const Profile = ({ user, authenticated }) => {
         }
       </h1>
       <h1>{profile.userName}</h1>
-      <h3>My Posts: {profile.posts}</h3>
+      <h3>
+        My Posts:{' '}
+        {profile.posts.map((post) => (
+          <div className="profile-posts">
+            <h2>{post.description}</h2>
+            <img src={post.image} />
+            <h4>Date: {post.createdAt}</h4>
+          </div>
+        ))}
+      </h3>
     </div>
   ) : (
     <h3>You must be signed in.</h3>
