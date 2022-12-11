@@ -12,7 +12,6 @@ const Profile = ({ user, authenticated }) => {
       let profileCard = await Client.get(`/users/${id}`)
       setProfile(profileCard.data)
       console.log('profile data:', profileCard.data)
-      console.log('profileee', profile.userName)
     }
     getProfile()
   }, [])
