@@ -6,6 +6,7 @@ import Nav from './components/Nav'
 import Home from './pages/Home'
 import Signin from './pages/Signin'
 import Register from './pages/Register'
+import Profile from './pages/Profile'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -39,7 +40,7 @@ function App() {
       />
       <main>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={<Home />} />
           <Route
             path="/signin"
             element={
@@ -48,8 +49,12 @@ function App() {
                 toggleAuthenticated={toggleAuthenticated}
               />
             }
-          ></Route>
+          />
           <Route path="/register" element={<Register />} />
+          <Route
+            path="/profile/:id"
+            element={<Profile user={user} authenticated={authenticated} />}
+          />
         </Routes>
       </main>
     </div>
