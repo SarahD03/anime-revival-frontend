@@ -16,20 +16,20 @@ const Profile = ({ user, authenticated }) => {
     }
     getProfile()
   }, [])
-  // if (profile.profileImage == null) {
-  //   return <img width={100} height={100} src={logo} />
-  // } else {
-  //   return <img src={profile.profileImage} />
-  // }
-  let logopic = <img src={logo} />
-  if (profile.profileImage == null) {
-    return logopic
-  }
 
+  // if profile is empty string or empty this will automatically load a default avatar
   return user && authenticated ? (
     <div>
-      <h2>My profile</h2>
-      <h1>{<img src={profile.profileImage} />}</h1>
+      <h1>My profile</h1>
+      <h1>
+        {
+          <img
+            src={profile?.profileImage || logo}
+            alt="profile pic"
+            className="profile-pic"
+          />
+        }
+      </h1>
       <h1>{profile.userName}</h1>
       <h3>My Posts: {profile.posts}</h3>
     </div>
