@@ -8,6 +8,7 @@ import Signin from './pages/Signin'
 import Register from './pages/Register'
 import Profile from './pages/Profile'
 import Feed from './pages/Feed.js'
+import NewPost from './pages/NewPost'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -59,6 +60,10 @@ function App() {
           <Route
             path="/feed"
             element={<Feed user={user} authenticated={authenticated} />}
+          />
+          <Route
+            path="/create"
+            element={<NewPost user={user} authenticated={authenticated} />}
           />
         </Routes>
       </main>
