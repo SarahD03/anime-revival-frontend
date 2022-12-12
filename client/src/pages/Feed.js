@@ -22,7 +22,12 @@ const Feed = ({ user, authenticated }) => {
       <h3>Welcome to your feed!</h3>
       <div className="post-card">
         {posts.map((item) => (
-          <div className="post-list">
+          <div
+            onClick={() => {
+              navigate(`/posts/${item.id}`)
+            }}
+            className="post-list"
+          >
             <h3>Posted by: {item.owner.userName}</h3>
             <img
               src={item.image}
