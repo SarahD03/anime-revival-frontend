@@ -25,7 +25,7 @@ const publicOptions = (
 return (<div>
         <header>
   <Link to="/">
-    <h3>Anime Revival</h3>
+    <h3>Anime Revival</h3> <img />
   </Link>
   {authenticated && user ? authenticatedOptions : publicOptions}
 </header>

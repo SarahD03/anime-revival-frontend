@@ -22,7 +22,14 @@ const Signin = (props) => {
   return (
     <div>
       <h2>Sign in to get full access!</h2>
-      <div>
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+        className="form-style-3"
+      >
         <form onSubmit={handleSubmit}>
           <label>UserName:</label>
           <input
@@ -42,7 +49,14 @@ const Signin = (props) => {
             required
             autoComplete="off"
           />
-          <button disabled={!formValues.userName || !formValues.password}>
+          <button
+            disabled={!formValues.userName || !formValues.password}
+            type="submit"
+            style={{
+              marginTop: '1em',
+              marginLeft: '10em'
+            }}
+          >
             Sign In
           </button>
         </form>
