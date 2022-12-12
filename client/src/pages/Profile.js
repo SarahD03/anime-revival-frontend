@@ -45,7 +45,10 @@ const Profile = ({ user, authenticated }) => {
         {posts.map((post) => (
           <div className="profile-posts">
             <h2 key={id}>{post.description}</h2>
-            <img src={post.image} />
+            <img
+              src={post.image}
+              style={{ width: '10em', border: '2px solid grey' }}
+            />
             <h4>Date: {post.createdAt}</h4>
           </div>
         ))}
