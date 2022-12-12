@@ -2,7 +2,6 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { BASE_URL } from '../services/api'
-// import { CheckSession } from './services/Auth'
 
 const NewPost = ({ user, authenticated }) => {
   let { id } = useParams()
@@ -27,6 +26,7 @@ const NewPost = ({ user, authenticated }) => {
       ownerId: id
     })
   }
+  console.log(id)
 
   return user && authenticated ? (
     <div className="form-style-3">

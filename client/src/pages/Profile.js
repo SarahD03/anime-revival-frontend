@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Client from '../services/api'
 import logo from '/Users/sarah03/ga_seir/projects/anime-revival-frontend2/client/src/logo.png'
-
+import { useNavigate } from 'react-router-dom'
 const Profile = ({ user, authenticated }) => {
+  let navigate = useNavigate()
   const [profile, setProfile] = useState([])
   const [posts, setPost] = useState([])
   let { id } = useParams()
@@ -39,9 +40,9 @@ const Profile = ({ user, authenticated }) => {
           />
         }
       </h1>
-      <h1>{profile.userName}</h1>
-      <h3>
-        My Posts:
+      <h1 className="profile-user">{profile.userName}</h1>
+      <div>
+        <h1>My Posts:</h1>
         {posts.map((post) => (
           <div className="profile-posts">
             <h2 key={id}>{post.description}</h2>
@@ -52,10 +53,14 @@ const Profile = ({ user, authenticated }) => {
             <h4>Date: {post.createdAt}</h4>
           </div>
         ))}
-      </h3>
+      </div>
     </div>
   ) : (
-    <h3>You must be signed in.</h3>
+    <div>
+      {' '}
+      <h3>You must be signed in.</h3>{' '}
+      <button onClick={() => navigate('/signin')}>Signin</button>
+    </div>
   )
 }
 
