@@ -12,6 +12,7 @@ const Post = () => {
     const apiCall = async () => {
       const response = await axios.get(`${BASE_URL}/posts/${id}`)
       setPost(response.data)
+      console.log(response.data)
     }
     apiCall()
   }, [])
