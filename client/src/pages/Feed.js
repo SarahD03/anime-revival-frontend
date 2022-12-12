@@ -35,6 +35,7 @@ const Feed = ({ user, authenticated }) => {
               alt="user post"
             />
             <h3>{item.description}</h3>
+            <h4>View Comments...</h4>
           </div>
         ))}
       </div>
