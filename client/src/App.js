@@ -30,6 +30,7 @@ function App() {
     const token = localStorage.getItem('token')
     if (token) {
       checkToken()
+      console.log(token)
     }
   }, [])
 

@@ -1,7 +1,8 @@
 import axios from 'axios'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { BASE_URL } from '../services/api'
+// import { CheckSession } from './services/Auth'
 
 const NewPost = ({ user, authenticated }) => {
   let { id } = useParams()
@@ -13,25 +14,13 @@ const NewPost = ({ user, authenticated }) => {
     ownerId: id
   })
 
-  //   useEffect(() => {
-  //     let Create = async () => {
-  //       let newPost = await axios.post(`${BASE_URL}/posts/${id}`, form)
-  //       setForm({
-  //         description: '',
-  //         image: '',
-  //         ownerId: id
-  //       })
-  //     }
-  //     Create()
-  //   }, [])
-
   const handleChange = (event) => {
     setForm({ ...form, [event.target.id]: event.target.value })
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    let newPost = await axios.post(`${BASE_URL}/posts/${id}`, form)
+    let newPost = await axios.post(`${BASE_URL}/posts`, form)
     setForm({
       description: '',
       image: '',
@@ -40,7 +29,7 @@ const NewPost = ({ user, authenticated }) => {
   }
 
   return user && authenticated ? (
-    <div>
+    <div className="form-style-3">
       <h2>Create a new Post!</h2>
       <form onSubmit={handleSubmit}>
         <label>Describe your post!</label>
