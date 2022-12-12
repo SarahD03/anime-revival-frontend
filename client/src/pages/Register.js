@@ -34,7 +34,7 @@ const Register = () => {
   return (
     <div>
       <h1>Create Your Account!</h1>
-      <div>
+      <div className="form-style-3">
         <form onSubmit={handleSubmit}>
           <label>UserName:</label>
           <input
@@ -81,6 +81,12 @@ const Register = () => {
               (!formValues.password &&
                 formValues.confirmPassword === formValues.password)
             }
+            type="submit"
+            style={{
+              display: 'flex',
+              marginTop: '1em',
+              marginLeft: '12em'
+            }}
           >
             Sign Up
           </button>
