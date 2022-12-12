@@ -34,7 +34,14 @@ const Register = () => {
   return (
     <div>
       <h1>Create Your Account!</h1>
-      <div className="form-style-3">
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+        className="form-style-3"
+      >
         <form onSubmit={handleSubmit}>
           <label>UserName:</label>
           <input
@@ -83,9 +90,8 @@ const Register = () => {
             }
             type="submit"
             style={{
-              display: 'flex',
               marginTop: '1em',
-              marginLeft: '12em'
+              marginLeft: '10em'
             }}
           >
             Sign Up
