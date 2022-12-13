@@ -56,7 +56,8 @@ console.log(post)
       <button>Post</button>
     </form>
 
-    </div>)
+    </div>
+    )
 }
 
 export default PostForm

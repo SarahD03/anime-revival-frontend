@@ -6,11 +6,11 @@ import { BASE_URL } from '../services/api'
 const NewPost = ({ user, authenticated, props }) => {
   let { id } = useParams()
   let navigate = useNavigate()
-
+  const [post, setPost] = useState()
   const [form, setForm] = useState({
     description: '',
     image: '',
-    ownerId: id
+    ownerId: user.id
   })
 
   const handleChange = (event) => {
@@ -20,14 +20,15 @@ const NewPost = ({ user, authenticated, props }) => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     let newPost = await axios.post(`${BASE_URL}/posts`, form)
+    alert('post created')
     setForm({
       description: '',
       image: '',
-      ownerId: id
+      ownerId: user.id
     })
   }
 
-  console.log(id)
+  console.log()
 
   return user && authenticated ? (
     <div className="form-style-3">
