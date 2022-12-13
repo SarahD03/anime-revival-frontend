@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { BASE_URL } from '../services/api'
 
-const NewPost = ({ user, authenticated }) => {
+const NewPost = ({ user, authenticated, props }) => {
   let { id } = useParams()
   let navigate = useNavigate()
 

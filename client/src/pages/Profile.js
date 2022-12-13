@@ -4,6 +4,7 @@ import Client, { BASE_URL } from '../services/api'
 import logo from '/Users/sarah03/ga_seir/projects/anime-revival-frontend2/client/src/logo.png'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import PostForm from '../components/PostForm'
 import ProfilePosts from '../components/ProfilePosts'
 const Profile = ({ user, authenticated }) => {
   let navigate = useNavigate()
@@ -56,6 +57,9 @@ const Profile = ({ user, authenticated }) => {
             <h5>post ID: {post.id}</h5>
             <Link to={`/posts-delete/${post.id}`}>
               <button>Delete post</button>
+            </Link>
+            <Link to={`/posts-update/${post.id}`}>
+              <button>Update</button>
             </Link>
           </div>
         ))}

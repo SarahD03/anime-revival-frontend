@@ -11,6 +11,7 @@ import Feed from './pages/Feed.js'
 import NewPost from './pages/NewPost'
 import Post from './pages/Post'
 import ProfilePosts from './components/ProfilePosts'
+import PostForm from './components/PostForm'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -70,6 +71,7 @@ function App() {
           />
           <Route path="/posts/:id" element={<Post />} />
           <Route path="/posts-delete/:id" element={<ProfilePosts />} />
+          <Route path="/posts-update/:id" element={<PostForm />} />
         </Routes>
       </main>
     </div>
