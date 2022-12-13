@@ -23,6 +23,7 @@ const Feed = ({ user, authenticated }) => {
       <div className="post-card">
         {posts.map((item) => (
           <div
+            key={posts.id}
             onClick={() => {
               navigate(`/posts/${item.id}`)
             }}

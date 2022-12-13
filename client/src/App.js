@@ -33,7 +33,6 @@ function App() {
     const token = localStorage.getItem('token')
     if (token) {
       checkToken()
-      console.log(token)
     }
   }, [])
 
@@ -57,6 +56,7 @@ function App() {
             }
           />
           <Route path="/register" element={<Register />} />
+
           <Route
             path="/profile/:id"
             element={<Profile user={user} authenticated={authenticated} />}
@@ -71,7 +71,10 @@ function App() {
           />
           <Route path="/posts/:id" element={<Post />} />
           <Route path="/posts-delete/:id" element={<ProfilePosts />} />
-          <Route path="/posts-update/:id" element={<PostForm />} />
+          <Route
+            path="/posts-update/:id"
+            element={<PostForm user={user} authenticated={authenticated} />}
+          />
         </Routes>
       </main>
     </div>

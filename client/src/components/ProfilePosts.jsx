@@ -1,7 +1,6 @@
 import axios from "axios"
 import { useEffect } from "react"
 import { useState } from "react"
-import Client from "../services/api"
 import { useParams } from "react-router-dom"
 import { BASE_URL } from "../services/api"
 

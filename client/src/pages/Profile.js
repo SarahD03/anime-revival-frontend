@@ -3,9 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import Client, { BASE_URL } from '../services/api'
 import logo from '/Users/sarah03/ga_seir/projects/anime-revival-frontend2/client/src/logo.png'
 import { useNavigate } from 'react-router-dom'
-import axios from 'axios'
-import PostForm from '../components/PostForm'
-import ProfilePosts from '../components/ProfilePosts'
+
 const Profile = ({ user, authenticated }) => {
   let navigate = useNavigate()
   const [profile, setProfile] = useState([])
@@ -43,11 +41,13 @@ const Profile = ({ user, authenticated }) => {
           />
         }
       </h1>
-      <h1 className="profile-user">{profile.userName}</h1>
+      <h1 className="profile-user" key={profile.id}>
+        {profile.userName}
+      </h1>
       <div>
         <h1>My Posts:</h1>
         {posts.map((post) => (
-          <div className="profile-posts" id={post.id}>
+          <div className="profile-posts" key={post.id} id={post.id}>
             <h2>{post.description}</h2>
             <img
               src={post.image}
