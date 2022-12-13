@@ -160,3 +160,21 @@ display: flexbox;
 
 }
 
+.comments {
+  border:#EB3B88 solid;
+  border-width: 4px;
+  margin: 6px;
+  margin-bottom: 20px;
+  margin-left: 15%;
+  width: 22em;
+  padding: 15px;
+  background-color: #FFE5E5;
+  border-radius: 10px;
+justify-content: center;
+box-shadow: #EB3B88 4px 5px ;
+color: #282c34;
+word-spacing: 2px;
+word-break: break-all;
+text-shadow:#FFC2DC 2px 2px 2px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
