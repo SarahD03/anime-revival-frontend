@@ -69,7 +69,10 @@ function App() {
             path="/create"
             element={<NewPost user={user} authenticated={authenticated} />}
           />
-          <Route path="/posts/:id" element={<Post />} />
+          <Route
+            path="/posts/:id"
+            element={<Post user={user} authenticated={authenticated} />}
+          />
           <Route path="/posts-delete/:id" element={<ProfilePosts />} />
           <Route
             path="/posts-update/:id"

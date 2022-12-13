@@ -1,12 +1,12 @@
 import axios from 'axios'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { BASE_URL } from '../services/api'
 
 const NewPost = ({ user, authenticated, props }) => {
   let { id } = useParams()
   let navigate = useNavigate()
-  const [post, setPost] = useState()
+
   const [form, setForm] = useState({
     description: '',
     image: '',

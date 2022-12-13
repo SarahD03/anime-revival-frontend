@@ -22,7 +22,7 @@ useEffect(() => {
   }
   apiCall()
 }, [])
-// console.log(response.data)
+
 
 
     const handleUpdate = async () => {
@@ -42,14 +42,12 @@ useEffect(() => {
       <label>Describe your post!</label>
       <input
         id="description"
-        // placeholder={post.description}
         value={formState.description}
         onChange={handleChange}
       />
       <label>Add image to post!</label>
       <input
         id="image"
-        // placeholder={post.image}
         value={formState.image}
         onChange={handleChange}
       />
