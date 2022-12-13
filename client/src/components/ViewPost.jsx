@@ -6,21 +6,8 @@ import { useParams } from "react-router-dom"
 const ViewPost = (props) => {
 
 
-let { id } = useParams()
-
-// const [comments, setComments] = useState(props)
-
-// useEffect(() => {
-//     const getPosts = async () => {
-//       let commentSec = await Client.get(`/posts/${id}`)
-//       setComments(commentSec.data.comments)
-//       console.log('comment data:', commentSec.data.comments)
-//     }
-//     getPosts()
-//   }, [])
-
 const comments = props.post.comments.map((comment) => comment.content)
-
+console.log(comments)
     return(
         <div className="view-post" >
         <h3>

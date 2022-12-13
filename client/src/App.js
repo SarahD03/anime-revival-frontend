@@ -10,6 +10,7 @@ import Profile from './pages/Profile'
 import Feed from './pages/Feed.js'
 import NewPost from './pages/NewPost'
 import Post from './pages/Post'
+import ProfilePosts from './components/ProfilePosts'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -68,6 +69,7 @@ function App() {
             element={<NewPost user={user} authenticated={authenticated} />}
           />
           <Route path="/posts/:id" element={<Post />} />
+          <Route path="/posts-delete/:id" element={<ProfilePosts />} />
         </Routes>
       </main>
     </div>

@@ -26,6 +26,7 @@ const NewPost = ({ user, authenticated }) => {
       ownerId: id
     })
   }
+
   console.log(id)
 
   return user && authenticated ? (
