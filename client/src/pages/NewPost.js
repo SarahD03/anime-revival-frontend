@@ -31,7 +31,15 @@ const NewPost = ({ user, authenticated, props }) => {
   console.log()
 
   return user && authenticated ? (
-    <div className="form-style-3">
+    <div
+      className="form-style-3"
+      style={{
+        marginLeft: '30%',
+        width: '42em',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }}
+    >
       <h2>Create a new Post!</h2>
       <form onSubmit={handleSubmit}>
         <label>Describe your post!</label>
@@ -48,7 +56,17 @@ const NewPost = ({ user, authenticated, props }) => {
           value={form.image}
           onChange={handleChange}
         />
-        <button>Post</button>
+        <button
+          type="submit"
+          style={{
+            display: 'flex',
+            width: '6em',
+            marginTop: '1em',
+            marginLeft: '17em'
+          }}
+        >
+          Post
+        </button>
       </form>
     </div>
   ) : (

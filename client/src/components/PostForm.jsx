@@ -36,7 +36,12 @@ useEffect(() => {
     
 
     return user && authenticated ? (
-    <div>      
+    <div style={{
+      marginLeft: '30%',
+      width: '42em',
+      alignItems: 'center',
+      justifyContent: 'center'
+    }} className="form-style-3">      
         <h2>Edit Your Post</h2>
     <form onSubmit={handleUpdate} >
       <label>Describe your post!</label>
@@ -51,7 +56,12 @@ useEffect(() => {
         value={formState.image}
         onChange={handleChange}
       />
-      <button>Post</button>
+      <button style={{
+            display: 'flex',
+            width: '6em',
+            marginTop: '1em',
+            marginLeft: '17em'
+          }}>Post</button>
     </form>
 
     </div>

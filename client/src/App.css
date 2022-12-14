@@ -26,7 +26,8 @@ nav {
   margin-right: 1em;
   display: flex;
   border-bottom: #EB3B88 solid;
-  box-shadow: #282c34;
+  border-width: 5px;
+  box-shadow:#C94A81 5px 9px 8px ;
 }
 
 nav a,
@@ -57,8 +58,9 @@ margin: 0px;
 	display:block;
 	margin-bottom: 10px;
   font-size: larger;
-
 }
+
+textarea,
 .form-style-3 input,
 .form-style-3 textarea{
 	border-radius: 3px;
@@ -124,6 +126,7 @@ font-size: 16px;
   width: 5em;
   border:#FF62A7 solid;
   border-width: 5px;
+  box-shadow: #C94A81 3px 2px 9px 6px;
 }
 .profile-title {
 font-family: 'New Century Schoolbook, TeX Gyre Schola, serif';
@@ -132,7 +135,14 @@ letter-spacing: 2px;
 font-size: 50px;
 text-shadow: #FFE5E5 1px 1px;
 }
-
+.feed-title {
+  font-family: 'New Century Schoolbook, TeX Gyre Schola, serif';
+word-spacing: 4px;
+letter-spacing: 2px;
+font-size: 50px;
+text-shadow: #FFE5E5 1px 1px;
+margin-bottom: -30px;
+}
 .profile-btn {
 	background: #EB3B88;
 	border: 1px solid #C94A81;
@@ -196,11 +206,13 @@ font-weight: 900;
 .post-list {
   border:#EB3B88 solid;
   border-width: 4px;
-  margin: 10px;
+  margin: 11px;
   content: inherit;
   width: 25em;
   background-color: #FFE5E5;
   border-radius: 4px;
+  padding: 5px;
+  box-shadow: #C94A81 5px 5px 8px 8px;
 
 }
 .view-post {
@@ -248,5 +260,20 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
+.comment-btn {
+  background: #EB3B88;
+	border: 1px solid #C94A81;
+	padding: 5px 15px 5px 15px;
+	color: #FFCBE2;
+	box-shadow: inset -1px -1px 3px #FF62A7;
+	-moz-box-shadow: inset -1px -1px 3px #FF62A7;
+	-webkit-box-shadow: inset -1px -1px 3px #FF62A7;
+	border-radius: 3px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;	
+	font-weight: bold;
+font-size: 16px;
+margin-bottom: 40px;
+}
 

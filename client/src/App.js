@@ -80,6 +80,7 @@ function App() {
           />
         </Routes>
       </main>
+      <footer></footer>
     </div>
   )
 }

@@ -19,7 +19,7 @@ const Feed = ({ user, authenticated }) => {
 
   return user && authenticated ? (
     <div>
-      <h3>Welcome to your feed!</h3>
+      <h3 className="feed-title">Welcome to your feed!</h3>
       <div className="post-card">
         {posts.map((item) => (
           <div
@@ -29,10 +29,15 @@ const Feed = ({ user, authenticated }) => {
             }}
             className="post-list"
           >
-            <h3>Posted by: {item.owner.userName}</h3>
+            <h3>Posted by: @{item.owner.userName}</h3>
             <img
               src={item.image}
-              style={{ width: '10em', border: '2px solid grey' }}
+              style={{
+                width: '15em',
+                width: '18em',
+                border: '2px solid grey',
+                borderRadius: '2px'
+              }}
               alt="user post"
             />
             <h3>{item.description}</h3>
