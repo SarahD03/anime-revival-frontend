@@ -31,19 +31,21 @@ const Profile = ({ user, authenticated }) => {
   // if profile is empty string or empty this will automatically load a default avatar
   return user && authenticated ? (
     <div>
-      <h1>My profile</h1>
-      <h1>
-        {
-          <img
-            src={profile?.profileImage || logo}
-            alt="profile pic"
-            className="profile-pic"
-          />
-        }
-      </h1>
-      <h1 className="profile-user" key={profile.id}>
-        {profile.userName}
-      </h1>
+      <section className="section-box">
+        <h1 className="profile-title">My profile</h1>
+        <h1>
+          {
+            <img
+              src={profile?.profileImage || logo}
+              alt="profile pic"
+              className="profile-pic"
+            />
+          }
+        </h1>
+        <h1 className="profile-user" key={profile.id}>
+          @{profile.userName}
+        </h1>
+      </section>
       <div>
         <h1>My Posts:</h1>
         {posts.map((post) => (
@@ -56,19 +58,18 @@ const Profile = ({ user, authenticated }) => {
             <h4>Date: {post.createdAt}</h4>
             <h5>post ID: {post.id}</h5>
             <Link to={`/posts-delete/${post.id}`}>
-              <button>Delete post</button>
+              <button className="profile-btn">Delete</button>
             </Link>
             <Link to={`/posts-update/${post.id}`}>
-              <button>Update</button>
+              <button className="profile-btn">Update</button>
             </Link>
           </div>
         ))}
       </div>
     </div>
   ) : (
-    <div>
-      {' '}
-      <h3>You must be signed in.</h3>{' '}
+    <div className="protected">
+      <h3>Please sign in to continue...</h3>
       <button onClick={() => navigate('/signin')}>Signin</button>
     </div>
   )

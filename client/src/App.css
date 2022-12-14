@@ -2,6 +2,7 @@
   text-align: center;
   background-color:#F072A9;
   background-repeat: round;
+
 }
 
 
@@ -40,6 +41,9 @@ nav h3 {
   color: #FFF4F4;
   margin-bottom: 5px;
   margin-top: -20px;
+  text-shadow: #282c34 1px 1px;
+  font-weight: 800;
+
 }
 nav :hover {
   font-size: 20px;
@@ -119,24 +123,74 @@ font-size: 16px;
   border-radius: 50%;
   width: 5em;
   border:#FF62A7 solid;
-  border-width: 4px;
+  border-width: 5px;
+}
+.profile-title {
+font-family: 'New Century Schoolbook, TeX Gyre Schola, serif';
+word-spacing: 4px;
+letter-spacing: 2px;
+font-size: 50px;
+text-shadow: #FFE5E5 1px 1px;
 }
 
+.profile-btn {
+	background: #EB3B88;
+	border: 1px solid #C94A81;
+	padding: 5px 15px 5px 15px;
+	color: #FFCBE2;
+	box-shadow: inset -1px -1px 3px #FF62A7;
+	-moz-box-shadow: inset -1px -1px 3px #FF62A7;
+	-webkit-box-shadow: inset -1px -1px 3px #FF62A7;
+	border-radius: 3px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;	
+	font-weight: bold;
+  margin-top: -4px;
+font-size: 16px;
+margin-bottom: 10px;
+margin-left: 10px;
+}
+
+.section-box {
+  border: #FFC2DC solid;
+  border-width: 20px;
+  border-radius: 19px;
+margin-right: 45px;
+margin-left: 45px;
+box-shadow: #EB3B88 3px 4px 9px 7px;
+margin-top: 10px;
+
+}
+
+
 .profile-posts {
-display: flexbox;
-  border: #F072A9 solid;
+display:inline-table;
+  border:#EB3B88 solid;
+  border-width: 4px;
   padding: 1px;
   margin: 10px;
   content: inherit;
   width: 25em;
   background-color: #FFE5E5;
-  border-radius: 4px;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-radius: 10px;
 }
+.profile-user {
+  font-family: 'Goudy Old Style';
+font: 100;
+font-size: 40px;
+letter-spacing: 2px;
+font-weight: 900;
+
+}
+
 
 .post-card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 5em;
+  position: relative;
 }
 
 .post-list {
@@ -173,8 +227,26 @@ display: flexbox;
 justify-content: center;
 box-shadow: #EB3B88 4px 5px ;
 color: #282c34;
+
 word-spacing: 2px;
 word-break: break-all;
 text-shadow:#FFC2DC 2px 2px 2px;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.protected button{
+  background: #EB3B88;
+  color: #FFC2DC;
+  font-size: 2em;
+  padding: 1.5rem;
+  border:#C94A81 solid;
+  border-width: 5px;
+  transition: all 0.5s;
+  border-radius: 15px;
+  width: auto;
+  position: relative;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+

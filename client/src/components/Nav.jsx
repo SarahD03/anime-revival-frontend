@@ -13,7 +13,7 @@ const Nav = ({authenticated, user, handleLogOut}) => {
             <Link to='/create'>New Post +</Link>
             <Link to='/feed'>Feed</Link>
             <Link onClick={() => navigate(-1) } >My Profile</Link>
-            <Link onClick={handleLogOut}>Sign Out</Link>
+            <Link onClick={handleLogOut}>Sign Out ↳</Link>
         </nav>
     )
 }
