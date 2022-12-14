@@ -12,10 +12,12 @@ import NewPost from './pages/NewPost'
 import Post from './pages/Post'
 import ProfilePosts from './components/ProfilePosts'
 import PostForm from './components/PostForm'
+import { useNavigate } from 'react-router-dom'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
   const [user, setUser] = useState(null)
+  let navigate = useNavigate()
 
   const handleLogOut = () => {
     setUser(null)

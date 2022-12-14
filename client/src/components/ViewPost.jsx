@@ -1,8 +1,8 @@
 const ViewPost = (props) => {
 const [allComments, setComments] = ([props.post.comments])
 
-const comments = props.post.comments.map((comment) => comment.content)
-console.log('comment state', allComments)
+
+
     return(
         <div className="view-post" >
         <h3>

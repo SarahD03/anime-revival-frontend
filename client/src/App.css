@@ -38,10 +38,11 @@ nav h3 {
   border: #FF62A7 solid;
   background-color: #EB3B88;
   color: #FFF4F4;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   margin-top: -20px;
   text-shadow: #282c34 1px 1px;
   font-weight: 800;
+box-shadow: #211f20 1px 1px 5px 2px;
 
 }
 nav :hover {
@@ -160,6 +161,7 @@ margin-bottom: 10px;
 margin-left: 10px;
 }
 
+
 .section-box {
   border: #FFC2DC solid;
   border-width: 20px;
@@ -183,6 +185,7 @@ display:inline-table;
   background-color: #FFE5E5;
   grid-template-columns: 1fr 1fr 1fr;
   border-radius: 10px;
+  box-shadow: #C94A81 4px 5px 8px 8px;
 }
 .profile-user {
   font-family: 'Goudy Old Style';
