@@ -3,10 +3,9 @@ import { useEffect } from "react"
 import { useState } from "react"
 import { useParams } from "react-router-dom"
 import { BASE_URL } from "../services/api"
-import logo2 from "/Users/sarah03/ga_seir/projects/anime-revival-frontend2/client/src/logo2.gif"
 
 const ProfilePosts = () => {
-
+const logo2 = '/logo2.gif'
     const [post, setPost] = useState([])
     let { id } = useParams()
 

@@ -4,9 +4,9 @@ import { useState } from "react"
 import { BASE_URL } from "../services/api"
 import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
-import logo3 from '/Users/sarah03/ga_seir/projects/anime-revival-frontend2/client/src/logo3.gif'
 
 const PostForm = ({ user, authenticated }) => {
+  const logo3 = '/logo3.gif'
 let navigate = useNavigate()
 let { id } = useParams()
 const [post, setPost] = useState()
