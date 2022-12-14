@@ -1,10 +1,9 @@
 import axios from 'axios'
 import { useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { BASE_URL } from '../services/api'
 
-const NewPost = ({ user, authenticated, props }) => {
-  let { id } = useParams()
+const NewPost = ({ user, authenticated }) => {
   let navigate = useNavigate()
 
   const [form, setForm] = useState({

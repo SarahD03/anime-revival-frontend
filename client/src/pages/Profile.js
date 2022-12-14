@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import Client, { BASE_URL } from '../services/api'
+import Client from '../services/api'
 import logo from '/Users/sarah03/ga_seir/projects/anime-revival-frontend2/client/src/logo.png'
 import { useNavigate } from 'react-router-dom'
 
@@ -54,6 +54,7 @@ const Profile = ({ user, authenticated }) => {
             <img
               src={post.image}
               style={{ width: '10em', border: '2px solid grey' }}
+              alt="profile-posts"
             />
             <h4>Date: {post.createdAt}</h4>
             <h5>post ID: {post.id}</h5>

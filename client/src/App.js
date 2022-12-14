@@ -80,7 +80,7 @@ function App() {
           />
         </Routes>
       </main>
-      <footer></footer>
+      <footer>@ 2022 CopyRight Sarah D.</footer>
     </div>
   )
 }

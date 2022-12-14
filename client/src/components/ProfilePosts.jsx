@@ -22,8 +22,15 @@ useEffect(() => {
   }
 console.log(id)
 
+    return(
+      <div>
+    <div className="protected">
+      <button 
+      onClick={handleDelete}>are you sure you want to delete?
+      </button>
+    </div>
 
-    return(<div className="protected"><button onClick={handleDelete}>are you sure you want to delete?</button></div>)
+    </div>)
 }
 
 export default ProfilePosts

@@ -1,5 +1,3 @@
-import { all } from "axios"
-
 const ViewPost = (props) => {
 const [allComments, setComments] = ([props.post.comments])
 
@@ -14,12 +12,12 @@ console.log('comment state', allComments)
             <img src={props.post.image} alt='user post' style={{ width: '20em', border: '2px solid grey' }}/>
             <h4>Comments:</h4>
             <h3>{allComments.map((comment) => (
-                <div className="comments">-{comment.content}</div>
+                <div className="comments">- {comment.content}</div>
             ))}</h3>
             <form onSubmit={props.handleSubmit}>
             <h4>Create Comment</h4>
             <textarea required id='content'value={props.form.content} onChange={props.handleChange}></textarea>
-            <button className="comment-btn">Comment</button>
+            <button type='submit' className="comment-btn">Comment</button>
             </form>
         </div>
     )

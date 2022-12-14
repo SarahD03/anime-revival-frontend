@@ -33,7 +33,6 @@ const Feed = ({ user, authenticated }) => {
             <img
               src={item.image}
               style={{
-                width: '15em',
                 width: '18em',
                 border: '2px solid grey',
                 borderRadius: '2px'
