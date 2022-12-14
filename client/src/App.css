@@ -18,6 +18,7 @@ header {
   background-color: #FFE5E5;
   margin: -5;
   border-bottom: #FFD5E7;
+  font-size: 18px;
 }
 nav {
   margin-right: 1em;
@@ -274,3 +275,8 @@ font-size: 16px;
 margin-bottom: 40px;
 }
 
+.user-handles {
+  font-style: italic;
+  text-decoration: underline;
+text-shadow: #FFB9B9 1px 1px 1px ;
+}

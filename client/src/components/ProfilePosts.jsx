@@ -3,6 +3,7 @@ import { useEffect } from "react"
 import { useState } from "react"
 import { useParams } from "react-router-dom"
 import { BASE_URL } from "../services/api"
+import logo2 from "/Users/sarah03/ga_seir/projects/anime-revival-frontend2/client/src/logo2.gif"
 
 const ProfilePosts = () => {
 
@@ -29,7 +30,7 @@ console.log(id)
       onClick={handleDelete}>are you sure you want to delete?
       </button>
     </div>
-
+<img src={logo2} alt='crying gif' style={{display: 'relative', marginTop: '30px', marginBottom: '100px', border: 'pink solid', borderWidth: '5px', borderRadius: '10px'}}/>
     </div>)
 }
 

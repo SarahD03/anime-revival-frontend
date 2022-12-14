@@ -29,7 +29,7 @@ const Feed = ({ user, authenticated }) => {
             }}
             className="post-list"
           >
-            <h3>Posted by: @{item.owner.userName}</h3>
+            <h3 className="user-handles">Posted by: @{item.owner.userName}</h3>
             <img
               src={item.image}
               style={{
@@ -40,7 +40,7 @@ const Feed = ({ user, authenticated }) => {
               alt="user post"
             />
             <h3>{item.description}</h3>
-            <h4>View Comments...</h4>
+            <h4 className="user-handles">View Comments...</h4>
           </div>
         ))}
       </div>

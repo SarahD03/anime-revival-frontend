@@ -4,6 +4,7 @@ import { useState } from "react"
 import { BASE_URL } from "../services/api"
 import { useParams } from "react-router-dom"
 import { useNavigate } from "react-router-dom"
+import logo3 from '/Users/sarah03/ga_seir/projects/anime-revival-frontend2/client/src/logo3.gif'
 
 const PostForm = ({ user, authenticated }) => {
 let navigate = useNavigate()
@@ -63,7 +64,7 @@ useEffect(() => {
             marginLeft: '17em'
           }}>Post</button>
     </form>
-
+<img src={logo3} alt='keyboard girl' style={{display: 'relative', width: '450px', marginTop: '30px', marginBottom: '100px', border: 'pink solid', borderWidth: '5px', borderRadius: '10px'}}/> 
     </div>
     ) : (
         <div className="protected">
