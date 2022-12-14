@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import Client from '../services/api'
-import logo from '/Users/sarah03/ga_seir/projects/anime-revival-frontend2/client/src/logo.png'
+import logo from '/Users/sarah03/ga_seir/projects/anime-revival-frontend2/src/logo.png'
 import { useNavigate } from 'react-router-dom'
 
 const Profile = ({ user, authenticated }) => {
