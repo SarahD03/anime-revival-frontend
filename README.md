@@ -25,4 +25,9 @@ Anime Revival is a blog created for people who are fond of anime to simply share
 
 
 ### **_Future Updates_**
-In the future this website will have extenisve sharing features like direct messages and also a like feature.
+- In the future this website will have extenisve sharing features like direct messages and also a like feature. 
+- A feature that allows users to change aspects of their profile will be added. (profile picture, chnage password, and email will be added.)
+- User name and profile pictures will be displayed when comments are made 
+
+### **_DEPLOYED SITE_**
+[Anime-Revival](https://anime-revival-frontend.herokuapp.com/)
